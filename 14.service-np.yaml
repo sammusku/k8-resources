@@ -12,4 +12,4 @@ spec:
  - protocol:  TCP
    port:  80 #service port
    targetPort:  80 #container port
-   nodeport: 32141  # otherwise it wil open from Range: 30000–32767
+   nodeport:  32141  # otherwise it wil open from Range: 30000–32767
