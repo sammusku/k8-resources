@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: nginx
 spec:
+ #By default service type is cloudIP
   selector:
     # labels are used as selectors
     project: roboshop
