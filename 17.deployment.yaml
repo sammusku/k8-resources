@@ -8,7 +8,7 @@ metadata:
    component: frontend
    tier: frontend
    purpose: deployment-demo
-   annotations:
+  annotations:
     kubernetes.io/change-cause: "BUG-fix"
 spec:
   replicas: 2
