@@ -21,16 +21,16 @@ spec:
   # This is pod definition, pod is subset of replicaset
   template:
    metadata:
-    name: pod1
+    name: 
     labels:
       project: roboshop
       purpose: rs-demo
       tier: frontend
       component: frontend
    spec:
-   containers:
-    - name: nginx
-      image: nginx:stable-alpine3.23-perl
+    containers:
+     - name: nginx
+       image: nginx:stable-alpine3.23-perl
 
 
 
