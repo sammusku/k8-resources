@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+  #these are labels for replica set
+   project: roboshop
+   component: frontend
+   tier: frontend
+   purpose: deployment-demo
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+   #using this matching labels rs select pods to create/run
+     project: roboshop
+     component: frontend
+     tier: frontend
+     purpose: deployment-demo
+
+  # This is pod definition, pod is subset of replicaset
+  template:
+   metadata:
+    name: 
+    labels:
+      project: roboshop
+      purpose: deployment-demo
+      tier: frontend
+      component: frontend
+   spec:
+    containers:
+     - name: nginx
+       image: nginx:stable-alpine3.23-perl
