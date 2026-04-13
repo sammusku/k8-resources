@@ -33,3 +33,20 @@ spec:
     containers:
      - name: nginx
        image: nginx:stable-alpine3.23-perl
+---
+apiVersion: v1
+kind: Service
+metadata:
+ - name: Service
+spec:
+ selector:
+    project: roboshop
+    component: frontend
+ ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+   
+
+   
+
